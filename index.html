@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+    <link rel="shortcut icon" href="jobs.png" type="image/x-icon">
+
+    <!--  tailwind + daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#F8FAFC]">
+    <header class="w-[1110px] mx-auto py-8 borber-b border-black border-2]">
+        <h1 class="font-bold text-3xl pb-8">Job Application Tracker</h1>
+        <div class="summary grid grid-cols-3 gap-4">
+            <div class="total p-5 rounded-lg bg-[#FFFFFF] space-y-3">
+                <h2>Total</h2>
+                <h1 id="total-count" class="text-black-600 font-bold">8</h1>
+            </div>
+            <div class="interview p-5 rounded-lg bg-[#FFFFFF] space-y-3">
+                <h2>Interview</h2>
+                <h1 id="interview-count"  class="text-green-600 font-bold">0</h1>
+            </div>
+            <div class="rejected p-5 rounded-lg bg-[#FFFFFF] space-y-3 ">
+                <h2>Rejected</h2>
+                <h1 id="rejected-count"  class="text-red-600 font-bold">0</h1>
+            </div>
+
+        </div>
+    </header>
+    <hr class="w-[1110px] mx-auto mb-8">
+
+  <main>
+
+      <!-- available jobs -->
+    <div class="flex justify-between w-[1110px] mx-auto pb-10">
+        <h1 class="font-semibold text-xl">Available Jobs</h1>
+        <h2>8 Jobs</h2>
+    </div>
+
+    <!-- buttons -->
+    <div class="w-[1110px] mx-auto flex gap-4 mb-8">
+        <div onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn bg-gray-300">All</div>
+        <div onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" 
+        class="btn bg-gray-300">Interview</div>
+        <div onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-gray-300">Rejected</div>
+
+    </div>
+
+    <!-- All jobs -->
+    <div  id="all-jobs" class="w-[1110px] mx-auto space-y-4">
+
+
+        <div class="bg-[#FFFFFF] p-4 space-y-2 rounded-md">
+           <div class="job-header flex justify-between items-center ">
+             <div class="left">
+                <h1 class="font-bold text-xl">Mobile First Corp</h1>
+            <p class="text-gray-500 ">React Native Developer</p>
+            </div>
+            <div class="left px-2 py-1.5  border-2 border-gray-300 rounded-full cursor-pointer">
+                <i class="fa-regular fa-trash-can "></i>
+            </div>
+           </div>
+            <p class="text-gray-500 pt-4">Remote
+                •
+                Full-time
+                •
+                $130,000 - $175,000</p>
+             <div class=" bg-gray-300 w-30 px-2 rounded-sm font-semibold  py-2">NOT APPLIED</div> 
+             <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+          <div class=" pt-6">
+               <div class="btn btn-outline text-green-700 hover:text-white hover:bg-green-800">INTERVIEW</div>  
+             <div class="btn btn-outline  text-red-600 hover:text-white hover:bg-red-700">REJECTED</div>  
+          </div>
+        </div>
+
+
+    </div>
+
+  </main>
+
+
+<script src="script/job.js"></script>
+</body>
+
+</html>
