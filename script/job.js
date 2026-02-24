@@ -1,48 +1,3 @@
-// const totalCount = document.getElementById('total-count')
-// const interviewCount = document.getElementById('interview-count')
-// const rejectedCount = document.getElementById('rejected-count')
-
-// // counting-------
-// let interviewList = [];
-// let rejectedList = [];
-
-// // filter button
-
-// const allFilterBtn = document.getElementById('all-filter-btn')
-// const interviewFilterBtn = document.getElementById('interview-filter-btn')
-// const rejectedFilterBtn = document.getElementById('rejected-filter-btn')
-
-// // no card section
-// const noCardSection = document.getElementById('no-card-section')
-
-// // main delegation
-// const mainContainer = document.querySelector('main');
-
-// console.log(mainContainer)
-
-// const allJobs = document.getElementById('all-jobs');
-// console.log(allJobs.children.length);
-
-// function calculateCount() {
-//     totalCount.innerText = allJobs.children.length;
-//     interviewCount.innerText = interviewList.length
-//     rejectedCount.innerText = rejectedList.length
-// }
-// calculateCount();
-
-// function toggleStyle(id) {
-//     allFilterBtn.classList.remove('bg-blue-600', 'text-white')
-//     interviewFilterBtn.classList.remove('bg-blue-600', 'text-white')
-//     rejectedFilterBtn.classList.remove('bg-blue-600', 'text-white')
-
-//     allFilterBtn.classList.add('bg-gray-300', 'text-black')
-//     interviewFilterBtn.classList.add('bg-gray-300', 'text-black')
-//     rejectedFilterBtn.classList.add('bg-gray-300', 'text-black');
-
-//     const selected = document.getElementById(id);
-//     selected.classList.add('bg-blue-600', 'text-white')
-//     selected.classList.remove('bg-gray-300', 'text-black')
-// }
 
 
 let interViewList = [];
@@ -195,7 +150,7 @@ mainContainer.addEventListener('click', function (event) {
         const jobName = parentNode.querySelector('.company-name').innerText;
         const jobDesignation = parentNode.querySelector('.position').innerText;
         const jobBadge = parentNode.querySelector('.badge');
-        const jobPlace = parentNode.querySelector('.locatio').innerText;
+        const jobPlace = parentNode.querySelector('.location').innerText;
         const jobTime = parentNode.querySelector('.job-time').innerText;
         const jobMoney = parentNode.querySelector('.salary').innerText;
         const jobDescription = parentNode.querySelector('.description').innerText;
@@ -238,7 +193,7 @@ mainContainer.addEventListener('click', function (event) {
     else if (event.target.closest('.delete-btn')) {
         const deleteBtn = event.target.closest('.delete-btn')
         const jobCard = deleteBtn.closest('.job-card');
-        const jobName = jobCard.querySelector('.companyname').innerText;
+        const jobName = jobCard.querySelector('.company-name').innerText;
         if (currentStatus == 'interview-filter-btn') {
             interViewList = interViewList.filter(item => item.jobName != jobName);
             jobNumber.innerText = interViewList.length;
@@ -286,6 +241,7 @@ function renderInterview() {
         <div class="flex justify-between">
     <h1 class="company-name text-xl font-bold main-color mb-1">${interview.jobName}</h1>
             <!-- delete button -->
+            
             <button class="btn border-gray-300 rounded-full  delete-btn p-2 shadow-none"><i
                     class="fa-regular fa-trash-can"></i></button>
         </div>
