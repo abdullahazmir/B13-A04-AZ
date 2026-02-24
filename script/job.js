@@ -96,7 +96,6 @@ mainContainer.addEventListener('click', function (event) {
 
     if (event.target.classList.contains('interview-btn')) {
 
-        console.log('interview');
         const parentNode = event.target.parentNode.parentNode;
         const jobName = parentNode.querySelector('.company-name').innerText;
         const jobDesignation = parentNode.querySelector('.position').innerText;
@@ -245,10 +244,10 @@ function renderInterview() {
 
         <p class="position gray-color">${interview.jobDesignation}</p>
     </div>
-<p class="gray-color text-sm space-x-3"><span class="job-place">${interview.jobPlace} </span>• <span class="job-time">${interview.jobTime} </span> <span class="job-money">${interview.jobMoney}</span></p>
+<p class="gray-color text-sm space-x-3"><span class="location">${interview.jobPlace} </span>• <span class="job-time">${interview.jobTime} </span> <span class="salary">${interview.jobMoney}</span></p>
     <!-- badge -->
     <div class="badge badge-md bg-green-100 main-color p-4 font-bold">${interview.jobBadge.innerText}</div>
-    <p class="job-description">${interview.jobDescription}</p>
+    <p class="description">${interview.jobDescription}</p>
 
 
     <!-- buttons -->
