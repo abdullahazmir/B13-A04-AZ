@@ -9,7 +9,7 @@ let interviewCount = document.getElementById('interview-count');
 let rejectedCount = document.getElementById('rejected-count');
 let jobNumber = document.getElementById('job-number');
 
-// console.log(total, interviewCount, rejectedCount);
+
 
 const allCardsSection = document.getElementById('all-jobs');
 const mainContainer = document.querySelector('main');
@@ -22,9 +22,6 @@ const filteredSection = document.getElementById('filtered-section');
 const rejectSection = document.getElementById('reject-section');
 const noCardSection = document.getElementById('no-card-section');
 
-// console.log(mainContainer);
-
-// console.log(allCardsSection.children);
 
 
 
@@ -241,8 +238,8 @@ function renderInterview() {
         <div class="flex justify-between">
     <h1 class="company-name text-xl font-bold main-color mb-1">${interview.jobName}</h1>
             <!-- delete button -->
-            
-            <button class="btn border-gray-300 rounded-full  delete-btn p-2 shadow-none"><i
+
+            <button class="btn border-gray-300 rounded-full  delete-btn px-2.5 py-1.5 shadow-none"><i
                     class="fa-regular fa-trash-can"></i></button>
         </div>
 
@@ -276,7 +273,7 @@ function renderReject() {
         <div class="flex justify-between">
     <h1 class="company-name text-xl font-bold main-color mb-1">${reject.jobName}</h1>
             <!-- delete button -->
-            <button class="btn border-gray-300 rounded-full  delete-btn p-2 shadow-none"><i
+            <button class="btn border-gray-300 rounded-full  delete-btn px-2.5 py-1.5 shadow-none"><i
                     class="fa-regular fa-trash-can"></i></button>
         </div>
 
